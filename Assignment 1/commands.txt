@@ -1,0 +1,55 @@
+ Study and try the following commands like route, tcpdump, netstat, ifconfig,nslookup and traceroute.
+ 
+route command: 
+Purpose: Displays or modifies the IP routing table.
+Usage:
+   Show routing table:
+	route -n
+   Add a route:
+	sudo route add -net 192.168.1.0/24 gw 192.168.0.1
+
+
+tcpdump command: 
+Purpose: Captures and analyzes network packets going through your network interfaces.
+Usage:
+    Capture all packets on eth0:
+sudo tcpdump -i eth0
+Capture only TCP packets on port 80:
+sudo tcpdump -i eth0 tcp port 80
+
+
+netstat command:
+Purpose: Displays network connections, routing tables, interface statistics, masquerade connections, and multicast memberships.
+Usage:
+    Show all listening ports and established connections:
+netstat -tuln
+Show routing table:
+netstat -r
+
+
+ifconfig command:
+Purpose: Displays or configures network interface parameters (deprecated on some systems in favor of ip).
+Usage:
+    Show all network interfaces:
+ifconfig
+Bring an interface up or down:
+sudo ifconfig eth0 up
+sudo ifconfig eth0 down
+
+
+nslookup command:
+Purpose: Queries Internet domain name servers to get DNS information.
+Usage:
+    Lookup IP for a domain:
+nslookup google.com
+Lookup DNS server information:
+nslookup
+> server 8.8.8.8
+> google.com
+
+
+traceroute command: 
+Purpose: Traces the route packets take to a network host.
+Usage:
+    Trace route to a host:
+traceroute google.com
